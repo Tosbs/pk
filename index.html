@@ -52,10 +52,10 @@
 <a class="b"  onclick="velo();">Velosipēdu Stāvvieta | 320</a>
 <a class="b"  onclick="baseins();">Dīķis | 640</a>
 <a class="b"  onclick="skulp();">Skulptūra | 1280</a>
-<a class="b"  onclick="sup();">Šūpoles | 2560</a>
+<a class="b"  onclick="sup();">Šūpoles | 5120</a>
 <a class="b"  onclick="struk();">Strūklaka | 10420</a>
 <a class="b"  onclick="piem();">Piemineklis | 20840</a>
-<a class="b" id="f"  onclick="kub();">??? | 999999</a>
+<a class="b" id="f"  onclick="kub();">??? | 9999999</a>
 </div>
 <h1 id="N">Nauda: 20.00 Apmeklētāji: 0</h1>
 
@@ -367,9 +367,9 @@ document.getElementById("N").style.color = "Darkred";
 }
 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 function struk(){
-if(z>=2560){
+if(z>=10420){
 a +=48;
-z -=2560;
+z -=10420;
 
 do{
 y = Math.floor(Math.random() * canH+1); 
@@ -395,9 +395,9 @@ document.getElementById("N").style.color = "Darkred";
 }
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////
 function kub(){
-if(z>=999999){
+if(z>=9999999){
 a +=999;
-z -=99999;
+z -=9999999;
 
 do{
 y = Math.floor(Math.random() * canH+1); 
@@ -410,7 +410,7 @@ ctx.strokeStyle="#9fa7a7";
 ctx.rect(x-20,y-20,40,40);
 ctx.stroke();
 ctx.fill();
-document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 999999" ;
+document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 9999999" ;
 
 }else{
 document.getElementById("N").style.color = "Darkred";
