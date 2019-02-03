@@ -69,6 +69,7 @@ var ctx = c.getContext("2d");
 canW = c.width;
 canH = c.height;
 
+var kd1 = [ 9922,16047,16096,23212,18251,22429,22071,14292,4942,5738,11914,23433,21516,2994,15005,24303,14195,4486,1195,3582,4727,21035,14970,18578,1527,22744,5912,8470,19586,11186,16272,26555,17692,27746,21279,20828,18707,4081,11175,4629,23473,27847,19859,22756,13054];
 var TRingacs = true;
 var x=0;
 var y = 0;
@@ -524,15 +525,7 @@ function kod(){
 kd=prompt("Ievadiet kodu.");
 if(iz){
 alert("Kodi jau tika izmantoti.\nLai izmantotu kodus atkal, pārlāde lapu!");
-}else if(kd=="1"){
-z+=1000;
-iz=true;
-document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
-}else if(kd=="2"){
-z+=1000;
-iz=true;
-document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
-}else if(kd=="3"){
+}else if(kd1.includes(kd)){
 z+=1000;
 iz=true;
 document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
