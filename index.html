@@ -1,547 +1,493 @@
 
 <html>
-<head>
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-1728309332723510",
-    enable_page_level_ads: true
-  });
-</script>
-        <meta charset="UTF-8">
-        <title>Parka Direktors</title>
-        <meta name="description" content="Spēle kur tu taisi parkus.">
-        <meta name="keywords" content="Spēle,Parka Direktors">
-        <meta name="author" content="Tomass Ringačs">
-    <style>
-       
-        body{background-color:#2e9628; font-family: sans-serif;}
-        canvas{margin: -6pt; margin-bottom: 5pt; border-bottom-style: solid; border-width: 5px; border-color: #278022; image-rendering: crisp-edges;}
-        .b{padding-top:20px;font-size: 100px; background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022;margin-right: 70px; margin: 0;
-        -webkit-transition-duration: 0.4s;transition-duration: 0.4s; display: flow-root; text-align: center; margin:auto}
-        .b:hover{background-color: rgb(106, 177, 106);}
-        .b:active{background-color: rgb(64, 134, 64)}
-        a:link {text-decoration: none;}
-        a:visited {text-decoration: none;}
-        a:hover {text-decoration: none;}
-        a:active {text-decoration: none;}
-        a:link{color:black}
-        a:visited{color:black}
-        #pogas{height:25%; margin-top:-5pt; overflow-x:hidden; overflow-y:visible; background-color: #288723;border: solid; border-width: 6px; border-color: #278022; }
-        #n{-webkit-transition-duration: 0.4s;transition-duration: 0.4s;  background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022; padding: 0; }
-        #c{padding-left:100px;padding-right:100px;background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022;margin-right: 70px; margin: 0;
-        -webkit-transition-duration: 0.4s;transition-duration: 0.4s; text-align: center; margin:auto}
-        #c:hover{background-color: rgb(106, 177, 106);}
-        #c:active{background-color: rgb(64, 134, 64)}
-        #em{text-transform: uppercase;color: #154413; font-weight: bold;}
-    </style>
+    <head>
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+   <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1728309332723510",
+        enable_page_level_ads: true
+      });
+    </script>
+            <meta charset="UTF-8">
+            <title>Parka Direktors</title>
+            <meta name="description" content="Spēle kur tu taisi parkus.">
+            <meta name="keywords" content="Spēle,Parka Direktors">
+            <meta name="author" content="Tomass Ringačs">
+        <style>
+           
+            body{background-color:#2e9628; font-family: sans-serif;}
+            canvas{margin: -6pt; margin-bottom: 5pt; border-bottom-style: solid; border-width: 5px; border-color: #278022; image-rendering: crisp-edges;}
+            .b{padding-top:20px;font-size: 100px; background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022;margin-right: 70px; margin: 0;
+            -webkit-transition-duration: 0.4s;transition-duration: 0.4s; display: flow-root; text-align: center; margin:auto}
+            .b:hover{background-color: rgb(106, 177, 106);}
+            .b:active{background-color: rgb(64, 134, 64)}
+            a:link {text-decoration: none;}
+            a:visited {text-decoration: none;}
+            a:hover {text-decoration: none;}
+            a:active {text-decoration: none;}
+            a:link{color:black}
+            a:visited{color:black}
+            #pogas{height:25%; margin-top:-5pt; overflow-x:hidden; overflow-y:visible; background-color: #288723;border: solid; border-width: 6px; border-color: #278022; }
+            #n{-webkit-transition-duration: 0.4s;transition-duration: 0.4s;  background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022; padding: 0; }
+            #c{padding-left:100px;padding-right:100px;background-color:darkseagreen; border: solid; border-width: 6px; border-color: #278022;margin-right: 70px; margin: 0;
+            -webkit-transition-duration: 0.4s;transition-duration: 0.4s; text-align: center; margin:auto}
+            #c:hover{background-color: rgb(106, 177, 106);}
+            #c:active{background-color: rgb(64, 134, 64)}
+            #em{text-transform: uppercase;color: #154413; font-weight: bold;}
+            #pal{background-color: #288723; font-family: monospace; border: solid; border-width: 6px; border-color: #278022; margin-top: 16px}
+        </style>
+    
+    </head>
+    <body>
+    
+    <canvas id="canvas" style="background-color:#4bf442; left: 0px;">
+    
+    </canvas>
+    <div id="Pogas">
+    <a class="b"  onclick="Pukes();">Puķes | 5</a>
+    <a class="b" onclick="Krums()">Krūms | 10</a>
+    <a class="b" h onclick="Sols()">Sols | 20</a>
+    <a class="b"  onclick="Miskaste()">Miskaste | 40</a>
+    <a class="b"  onclick="lampatronins();">Lampa | 80</a>
+    <a class="b"  onclick="put();">Putnu barotava | 160</a>
+    <a class="b"  onclick="velo();">Velosipēdu Stāvvieta | 320</a>
+    <a class="b"  onclick="baseins();">Dīķis | 640</a>
+    <a class="b"  onclick="skulp();">Skulptūra | 1280</a>
+    <a class="b"  onclick="sup();">Šūpoles | 5120</a>
+    <a class="b"  onclick="struk();">Strūklaka | 10420</a>
+    <a class="b"  onclick="piem();">Piemineklis | 20840</a>
+    <a class="b" id="f"  onclick="kub();">??? | 9999999</a>
+    </div>
 
-</head>
-<body>
-
-<canvas id="canvas" style="background-color:#4bf442; left: 0px;">
-
-</canvas>
-<div id="Pogas">
-<a class="b"  onclick="Pukes();">Puķes | 5</a>
-<a class="b" onclick="Krums()">Krūms | 10</a>
-<a class="b" h onclick="Sols()">Sols | 20</a>
-<a class="b"  onclick="Miskaste()">Miskaste | 40</a>
-<a class="b"  onclick="lampatronins();">Lampa | 80</a>
-<a class="b"  onclick="put();">Putnu barotava | 160</a>
-<a class="b"  onclick="velo();">Velosipēdu Stāvvieta | 320</a>
-<a class="b"  onclick="baseins();">Dīķis | 640</a>
-<a class="b"  onclick="skulp();">Skulptūra | 1280</a>
-<a class="b"  onclick="sup();">Šūpoles | 5120</a>
-<a class="b"  onclick="struk();">Strūklaka | 10420</a>
-<a class="b"  onclick="piem();">Piemineklis | 20840</a>
-<a class="b" id="f"  onclick="kub();">??? | 9999999</a>
-</div>
-<h1 id="N">Nauda: 20.00 Apmeklētāji: 0</h1>
-
-<script>
-var ScreenW = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
-var ScreenH = window.innerHeight - window.innerHeight/2.5 || document.documentElement.clientHeight - document.documentElement.clientHeight/2.5 || document.body.clientHeight - document.body.clientHeight/2.5;
-document.getElementById('canvas').width = ScreenW;
-document.getElementById('canvas').height = ScreenH;
-var c = document.getElementById("canvas");
-var ctx = c.getContext("2d");
-canW = c.width;
-canH = c.height;
-
-var kd1 = [ 9922,16047,16096,23212,18251,22429,22071,14292,4942,5738,11914,23433,21516,2994,15005,24303,14195,4486,1195,3582,4727,21035,14970,18578,1527,22744,5912,8470,19586,11186,16272,26555,17692,27746,21279,20828,18707,4081,11175,4629,23473,27847,19859,22756,13054];
-var TRingacs = true;
-var x=0;
-var y = 0;
-var col;
-var z = 20;
-var a = 0;
-var a1 = new Array();
-var k = 0;
-var kd;
-var iz=false;
-///////////////////////////////////////////////////////////////////////////////
-function Sols(){
-
-if(z>=20){
-a +=1;
-z -=20;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#B56917";
-ctx.fillStyle="#c1711b";
-ctx.lineWidth=4;
-ctx.rect(x-40, y, 10,30);
-ctx.stroke();
-ctx.fill();
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#B56917";
-ctx.fillStyle="#c1711b";
-ctx.lineWidth=4;
-ctx.rect(x+40, y,-10,30);
-ctx.stroke();
-ctx.fill();
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#B56917";
-ctx.fillStyle="#c1711b";
-ctx.lineWidth=4;
-ctx.rect(x-60, y,120,10);
-ctx.stroke();
-ctx.fill();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-//////////////////////////////////////////////////////////////////////////////
-function Krums(){
-    if(z>=10){
-
-a+=0.5;
-z-=10;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#198210";
-ctx.fillStyle="#1c9912";
-ctx.arc(x, y, 50, Math.PI, 2 * Math.PI);
-ctx.closePath();
-ctx.stroke();
-ctx.fill();
-    }else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-///////////////////////////////////////////////////////////////////////////////
-function Pukes(){
-    if(z>=5){
-
-a+=0.25;
-z -=5;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1);
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#198210";
-ctx.arc(x, y, 50, Math.PI, 1.25* Math.PI);
-ctx.stroke();
-ctx.beginPath();
-col = Math.floor(Math.random() * 361);
-
-ctx.fillStyle="hsl("+ col+",100%,50%)";
-ctx.strokeStyle="hsl("+ col+",100%,40%)";;
-ctx.lineWidth=10;
-ctx.arc(x-25, y-40, 10, 0, 2* Math.PI);
-ctx.stroke();
-ctx.fill();
-
-ctx.beginPath();
-ctx.lineWidth=5;
-ctx.strokeStyle="#198210";
-ctx.arc(x, y, 50, 0, 1.75* Math.PI,true);
-ctx.stroke();
-ctx.beginPath();
-
-col = Math.floor(Math.random() * 361);
-
-ctx.fillStyle="hsl("+ col+",100%,50%)";
-ctx.strokeStyle="hsl("+ col+",100%,40%)";;
-ctx.lineWidth=10;
-ctx.arc(x+25, y-40, 10, 0, 2* Math.PI);
-ctx.stroke();
-ctx.fill();
-
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-
-///////////////////////////////////////////////////////////////////////////
-function draw(){
-ctx.clearRect(0,canH/2-50,canW,100);
-
-ctx.beginPath();
-ctx.strokeStyle="#E5C4A6";
-ctx.lineWidth=5;
-ctx.rect(0,canH/2-50,canW,100);
-ctx.fillStyle="#FFDAB9";
-ctx.fill();
-ctx.stroke();
-
-
-for(i=0;i-1<a1.length-1;i++){ 
-
-    ctx.lineWidth=6;
-    ctx.strokeStyle="#dddddd";
-    ctx.fillStyle="#ffffff"
+    <h1 id="N">Nauda: 20.00 Apmeklētāji: 0</h1>
+    
+    <script>
+    var ScreenW = window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;
+    var ScreenH = window.innerHeight - window.innerHeight/2.5 || document.documentElement.clientHeight - document.documentElement.clientHeight/2.5 || document.body.clientHeight - document.body.clientHeight/2.5;
+    document.getElementById('canvas').width = ScreenW;
+    document.getElementById('canvas').height = ScreenH;
+    var c = document.getElementById("canvas");
+    var ctx = c.getContext("2d");
+    canW = c.width;
+    canH = c.height;
+    var kd1 = [ 9922,16047,16096,23212,18251,22429,22071,14292,4942,5738,11914,23433,21516,2994,15005,24303,14195,4486,1195,3582,4727,21035,14970,18578,1527,22744,5912,8470,19586,11186,16272,26555,17692,27746,21279,20828,18707,4081,11175,4629,23473,27847,19859,22756,13054];
+    var TRingacs = true;
+    var x=0;
+    var y = 0;
+    var col;
+    var z = 20;
+    var a = 0;
+    var a1 = new Array();
+    var k = 0;
+    var kd;
+    var iz=false;
+    ///////////////////////////////////////////////////////////////////////////////
+    function Sols(){
+    if(z>=20){
+    a +=1;
+    z -=20;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
     ctx.beginPath();
-    ctx.arc(a1[i], canH/2, 50, 0, 2* Math.PI,);
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#B56917";
+    ctx.fillStyle="#c1711b";
+    ctx.lineWidth=4;
+    ctx.rect(x-40, y, 10,30);
     ctx.stroke();
     ctx.fill();
-    if(a1[1]!=NaN){
-    a1[i] +=1;}
-    if(a1[i]>canW+100){
-        a1[i]=-100;
-
+    ctx.beginPath();
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#B56917";
+    ctx.fillStyle="#c1711b";
+    ctx.lineWidth=4;
+    ctx.rect(x+40, y,-10,30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#B56917";
+    ctx.fillStyle="#c1711b";
+    ctx.lineWidth=4;
+    ctx.rect(x-60, y,120,10);
+    ctx.stroke();
+    ctx.fill();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
     }
+    }
+    //////////////////////////////////////////////////////////////////////////////
+    function Krums(){
+        if(z>=10){
+    a+=0.5;
+    z-=10;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    ctx.beginPath();
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#198210";
+    ctx.fillStyle="#1c9912";
+    ctx.arc(x, y, 50, Math.PI, 2 * Math.PI);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+        }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////////
+    function Pukes(){
+        if(z>=5){
+    a+=0.25;
+    z -=5;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1);
+    ctx.beginPath();
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#198210";
+    ctx.arc(x, y, 50, Math.PI, 1.25* Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    col = Math.floor(Math.random() * 361);
+    ctx.fillStyle="hsl("+ col+",100%,50%)";
+    ctx.strokeStyle="hsl("+ col+",100%,40%)";;
+    ctx.lineWidth=10;
+    ctx.arc(x-25, y-40, 10, 0, 2* Math.PI);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.lineWidth=5;
+    ctx.strokeStyle="#198210";
+    ctx.arc(x, y, 50, 0, 1.75* Math.PI,true);
+    ctx.stroke();
+    ctx.beginPath();
+    col = Math.floor(Math.random() * 361);
+    ctx.fillStyle="hsl("+ col+",100%,50%)";
+    ctx.strokeStyle="hsl("+ col+",100%,40%)";;
+    ctx.lineWidth=10;
+    ctx.arc(x+25, y-40, 10, 0, 2* Math.PI);
+    ctx.stroke();
+    ctx.fill();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////
+    function draw(){
+    ctx.clearRect(0,canH/2-50,canW,100);
+    ctx.beginPath();
+    ctx.strokeStyle="#E5C4A6";
+    ctx.lineWidth=5;
+    ctx.rect(0,canH/2-50,canW,100);
+    ctx.fillStyle="#FFDAB9";
+    ctx.fill();
+    ctx.stroke();
+    for(i=0;i-1<a1.length-1;i++){ 
+        ctx.lineWidth=6;
+        ctx.strokeStyle="#dddddd";
+        ctx.fillStyle="#ffffff"
+        ctx.beginPath();
+        ctx.arc(a1[i], canH/2, 50, 0, 2* Math.PI,);
+        ctx.stroke();
+        ctx.fill();
+        if(a1[1]!=NaN){
+        a1[i] +=1;}
+        if(a1[i]>canW+100){
+            a1[i]=-100;
+        }
+    }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function Miskaste(){
+    if(z>=40){
+    a +=1.5;
+    z -=40;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.fillStyle="#777677";
+    ctx.strokeStyle="#595859";
+    ctx.moveTo(x-30,y-30);
+    ctx.bezierCurveTo(x-50,y+30,x+50,y+30,x+30,y-30);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////////
+    function lampatronins(){
+    if(z>=80){
+    a +=3;
+    z -=80;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.fillStyle="#777677";
+    ctx.strokeStyle="#595859";
+    ctx.rect(x-10,y-15,20,30);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.fillStyle="#fed500";
+    ctx.strokeStyle="#e3bc13";
+    ctx.arc(x, y-15, 15, Math.PI, 2*Math.PI);
+    ctx.closePath();
+    ctx.stroke();
+    ctx.fill();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    function velo(){
+    if(z>=320){
+    a +=6;
+    z -=320;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#9fa7a7";
+    ctx.arc(x-40, y-10, 35, Math.PI, 2*Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle="#9fa7a7";
+    ctx.arc(x, y, 35, Math.PI, 2*Math.PI);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle="#9fa7a7";
+    ctx.arc(x+40, y+10, 35, Math.PI, 2*Math.PI);
+    ctx.stroke();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////
+    function baseins(){
+    if(z>=640){
+    a +=12;
+    z -=640;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#3151b7";
+    ctx.fillStyle="#3c6df0";
+    ctx.arc(x, y, 35, 0, 2*Math.PI);
+    ctx.stroke();
+    ctx.fill();
+    }
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////////////
+    function skulp(){
+    if(z>=1280){
+    a +=24;
+    z -=1280;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#ccbcbc";
+    ctx.fillStyle="#e2d5d5";
+    ctx.rect(x-25,y,50,20);
+    ctx.rect(x-12.5,y-50,25,50);
+    ctx.fill();
+    ctx.stroke();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////////
+    function struk(){
+    if(z>=10420){
+    a +=48;
+    z -=10420;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#ccbcbc";
+    ctx.fillStyle="#e2d5d5";
+    ctx.rect(x-50,y,100,20);
+    ctx.rect(x-12.5,y-20,25,20);
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.arc(x, y-20, 10, Math.PI, 2*Math.PI);
+    ctx.strokeStyle="#2d74da";
+    ctx.stroke();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    function kub(){
+    if(z>=9999999){
+    a +=999;
+    z -=9999999;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.fillStyle="#b8c1c1";
+    ctx.strokeStyle="#9fa7a7";
+    ctx.rect(x-20,y-20,40,40);
+    ctx.stroke();
+    ctx.fill();
+    document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 9999999" ;
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    //////////////////////////////////////////////////////////////////////////////////
+    function sup(){
+    if(z>=5120){
+    a +=96;
+    z -=5120;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#aa231f";
+    ctx.fillStyle="#e62325";
+    ctx.rect(x-5,y,10,10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.strokeStyle="#12a3b4";
+    ctx.fillStyle="#00b6cb";
+    ctx.rect(x-50,y-10,100,10);
+    ctx.fill();
+    ctx.stroke();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////
+    function put(){
+    if(z>=160){
+    a +=4.5;
+    z -=160;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#653d1b";
+    ctx.fillStyle="#ad6418";
+    ctx.rect(x-5,y,10,10);
+    ctx.fill();
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.rect(x-15,y-10,30,10);
+    ctx.fill();
+    ctx.stroke();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ////////////////////////////////////////////////////////////////////////////////////////////////
+    function piem(){
+    if(z>=20840){
+    a +=120;
+    z -=20840;
+    do{
+    y = Math.floor(Math.random() * canH+1); 
+    }while(y>canH/2-70&&y<canH/2+120);
+    var x = Math.floor(Math.random() * canW+1); 
+    a1[Math.floor(a1.length)] = -100;
+    ctx.beginPath();
+    ctx.strokeStyle="#7d7373";
+    ctx.fillStyle="#9e9191";
+    ctx.rect(x-20,y-20,40,40);
+    ctx.stroke();
+    ctx.fill();
+    ctx.beginPath();
+    ctx.rect(x-10,y-40,20,40);
+    ctx.stroke();
+    ctx.fill();
+    }else{
+    document.getElementById("N").style.color = "Darkred";
+    }
+    }
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    function m(){
+    for(i=0;i<a;i++){
+    document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
+    document.getElementById("N").style.color = "#000000";
+    z += Math.random();
+    }
+    }
+    setInterval(draw,16);
+    setInterval(m,1000);
+    function kod(){
 
-}
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-function Miskaste(){
-
-if(z>=40){
-a +=1.5;
-z -=40;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.fillStyle="#777677";
-ctx.strokeStyle="#595859";
-ctx.moveTo(x-30,y-30);
-ctx.bezierCurveTo(x-50,y+30,x+50,y+30,x+30,y-30);
-ctx.closePath();
-ctx.stroke();
-ctx.fill();
-
-
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-}
-}
-////////////////////////////////////////////////////////////////////////////////////////////////////
-function lampatronins(){
-if(z>=80){
-a +=3;
-z -=80;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.fillStyle="#777677";
-ctx.strokeStyle="#595859";
-ctx.rect(x-10,y-15,20,30);
-ctx.stroke();
-ctx.fill();
-ctx.beginPath();
-ctx.fillStyle="#fed500";
-ctx.strokeStyle="#e3bc13";
-ctx.arc(x, y-15, 15, Math.PI, 2*Math.PI);
-ctx.closePath();
-ctx.stroke();
-ctx.fill();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-function velo(){
-if(z>=320){
-a +=6;
-z -=320;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-
-ctx.beginPath();
-ctx.strokeStyle="#9fa7a7";
-ctx.arc(x-40, y-10, 35, Math.PI, 2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="#9fa7a7";
-ctx.arc(x, y, 35, Math.PI, 2*Math.PI);
-ctx.stroke();
-ctx.beginPath();
-ctx.strokeStyle="#9fa7a7";
-ctx.arc(x+40, y+10, 35, Math.PI, 2*Math.PI);
-ctx.stroke();
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-function baseins(){
-if(z>=640){
-a +=12;
-z -=640;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#3151b7";
-ctx.fillStyle="#3c6df0";
-ctx.arc(x, y, 35, 0, 2*Math.PI);
-ctx.stroke();
-ctx.fill();
-
-}
-}
-//////////////////////////////////////////////////////////////////////////////////////////////////
-function skulp(){
-if(z>=1280){
-a +=24;
-z -=1280;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#ccbcbc";
-ctx.fillStyle="#e2d5d5";
-ctx.rect(x-25,y,50,20);
-ctx.rect(x-12.5,y-50,25,50);
-ctx.fill();
-ctx.stroke();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////////
-function struk(){
-if(z>=10420){
-a +=48;
-z -=10420;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#ccbcbc";
-ctx.fillStyle="#e2d5d5";
-ctx.rect(x-50,y,100,20);
-ctx.rect(x-12.5,y-20,25,20);
-ctx.fill();
-ctx.stroke();
-ctx.beginPath();
-ctx.arc(x, y-20, 10, Math.PI, 2*Math.PI);
-ctx.strokeStyle="#2d74da";
-ctx.stroke();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////
-function kub(){
-if(z>=9999999){
-a +=999;
-z -=9999999;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.fillStyle="#b8c1c1";
-ctx.strokeStyle="#9fa7a7";
-ctx.rect(x-20,y-20,40,40);
-ctx.stroke();
-ctx.fill();
-document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 9999999" ;
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-//////////////////////////////////////////////////////////////////////////////////
-function sup(){
-if(z>=5120){
-a +=96;
-z -=5120;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#aa231f";
-ctx.fillStyle="#e62325";
-ctx.rect(x-5,y,10,10);
-ctx.fill();
-ctx.stroke();
-
-ctx.beginPath();
-ctx.strokeStyle="#12a3b4";
-ctx.fillStyle="#00b6cb";
-ctx.rect(x-50,y-10,100,10);
-ctx.fill();
-ctx.stroke();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-///////////////////////////////////////////////////////////////////////////////////////////
-function put(){
-if(z>=160){
-a +=4.5;
-z -=160;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#653d1b";
-ctx.fillStyle="#ad6418";
-ctx.rect(x-5,y,10,10);
-ctx.fill();
-ctx.stroke();
-
-ctx.beginPath();
-ctx.rect(x-15,y-10,30,10);
-ctx.fill();
-ctx.stroke();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-////////////////////////////////////////////////////////////////////////////////////////////////
-function piem(){
-if(z>=20840){
-a +=120;
-z -=20840;
-
-do{
-y = Math.floor(Math.random() * canH+1); 
-}while(y>canH/2-70&&y<canH/2+120);
-var x = Math.floor(Math.random() * canW+1); 
-a1[Math.floor(a1.length)] = -100;
-ctx.beginPath();
-ctx.strokeStyle="#7d7373";
-ctx.fillStyle="#9e9191";
-ctx.rect(x-20,y-20,40,40);
-ctx.stroke();
-ctx.fill();
-ctx.beginPath();
-ctx.rect(x-10,y-40,20,40);
-ctx.stroke();
-ctx.fill();
-
-}else{
-document.getElementById("N").style.color = "Darkred";
-
-}
-}
-///////////////////////////////////////////////////////////////////////////////////////////////////
-function m(){
-
-
-
-
-
-for(i=0;i<a;i++){
-document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
-document.getElementById("N").style.color = "#000000";
-z += Math.random();
-}
-}
-
-setInterval(draw,16);
-setInterval(m,1000);
-
-
-function kod(){
-kd=prompt("Ievadiet kodu.");
-if(iz){
-alert("Kodi jau tika izmantoti.\nLai izmantotu kodus atkal, pārlāde lapu!");
-}else if(kd1.includes(kd)){
-z+=1000;
-iz=true;
-document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
-}else{
-alert("Nepareizs kods!");
-}
-}
-
-if(TRingacs !== true){
-location.assign("https://www.google.com/");
-}
-
-</script>
-
-<a id="c" onclick="kod();"><b>Ievadīt Kodu</b></a>
-<p id="em">tomass71763(at)inbox.lv</p>
-</body>
-
-</html>
+    kd=prompt("Ievadiet kodu.");
+    if(iz){
+    alert("Kodi jau tika izmantoti.\nLai izmantotu kodus atkal, pārlāde lapu!");
+    }else{
+    z+=500;
+    iz=true;
+    document.getElementById("N").innerHTML = "Nauda: "+z.toFixed(2)+" Apmeklētāji: "+Math.floor(a);
+    }
+    }
+    //Esmu slinks ielikt īstus kodus.
+    if(TRingacs !== true){
+    location.assign("https://www.google.com/");
+    }
+    </script>
+    
+    <a id="c" onclick="kod();"><b>Ievadīt Kodu</b></a>
+    
+    <div id="pal">
+    <h1>Palīdzība</h1>
+    <p>Spiežot pogu ar kādu lietu, noliks to lietu uz laukuma un nāks apmeklētāji.</p>
+    <p>Ja tev nepietiek naudas, tad tu nevarēsi nopirkt lietu.</p>
+    <p>Apmeklētāji katru sekundi dos nejauša daudzuma naudas.</p>
+    <p>Ievadot speciālu kodu tu dabūsi 500 naudas.</p>
+    <p>Spēlē nav īpaša mērķa, bet ja grib, tad var mēģināt savāk slepeno lietu.</p>
+    <p>###############</p>
+    <p>Ja spēle nestrādā, tad pārlādē lapu, ieslēdz Javascript vai izmanto citu pārlūkprogrammu.</p>
+    </div>
+    <div id="pal">
+    <h1>Par</h1>
+    <p>Man ir 13 gadi.</p>
+    <p>Es šo spēli izveidoju viens pats.</p>
+    <p>Šo spēli es izveidoju skolas projektam.</p>
+    <p>Skolas projekts bija par uzņēmēj darbību.</p>
+    <p>Tapēc es izveidoju šo spēli.</p>
+    <p>Tas nebija grūti.</p>
+    <p></p>
+    </div>
+    <p id="em">tomass71763(at)inbox.lv</p>
+    </body>
+    
+    </html>
