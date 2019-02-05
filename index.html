@@ -56,7 +56,7 @@
     <a class="b"  onclick="sup();">Šūpoles | 5120</a>
     <a class="b"  onclick="struk();">Strūklaka | 10420</a>
     <a class="b"  onclick="piem();">Piemineklis | 20840</a>
-    <a class="b" id="f"  onclick="kub();">??? | 9999999</a>
+    <a class="b" id="f"  onclick="kub();">??? | 99999999</a>
     </div>
 
     <h1 id="N">Nauda: 20.00 Apmeklētāji: 0</h1>
@@ -345,9 +345,9 @@
     }
     /////////////////////////////////////////////////////////////////////////////////////////////////////////////
     function kub(){
-    if(z>=9999999){
+    if(z>=99999999){
     a +=999;
-    z -=9999999;
+    z -=99999999;
     do{
     y = Math.floor(Math.random() * canH+1); 
     }while(y>canH/2-70&&y<canH/2+120);
@@ -359,7 +359,7 @@
     ctx.rect(x-20,y-20,40,40);
     ctx.stroke();
     ctx.fill();
-    document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 9999999" ;
+    document.getElementById("f").innerHTML="Kaļķakmeņa kubs | 99999999" ;
     }else{
     document.getElementById("N").style.color = "Darkred";
     }
