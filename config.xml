@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="lv.TomassR.Parks2" version="1.0.0" >
+    <icon src="res/icon.png"/>
+    <name>Parka Direktors 2</name>
+    <description>
+       Makarons Rīsos
+    </description>
+    <author email="tomass71763@inbox.lv" href="tosbs.github.io">       
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
